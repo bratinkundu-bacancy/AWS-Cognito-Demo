@@ -10,6 +10,9 @@ import {
 } from "react-router-dom";
 import SignUp from "./Components/SignUp";
 import Login from "./Components/Login";
+import ResetPassword from "./Components/reset-pw";
+import ChangePassword from './Components/change-pw';
+import MainPage from './Components/main-page';
 
 function App() {
   useEffect(() => {
@@ -29,6 +32,9 @@ function App() {
           <Route path="/login" children={<Login />} />
           <Redirect path="/" exact to="login" /> 
           <Route path="/signup" children={<SignUp />} />
+          <Route path="/resetpw" children={<ResetPassword />} />
+          <Route path="/changepw/:email" children={<ChangePassword />} />
+          <Route path="/mainpage" children={<MainPage />} />
         </Switch>
       </div>
     </Router>
